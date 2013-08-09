@@ -1,0 +1,122 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <Preference
+     android:title="@string/pref_hint"
+     android:layout="@layout/hint"
+     android:enabled="false"
+     android:selectable="false"
+  />
+
+  <PreferenceCategory android:title="@string/pref_cat_logging">
+    <CheckBoxPreference
+       android:key="enable_logging"
+       android:title="@string/pref_enable_logging"
+       android:summary="@string/pref_enable_logging_summary"
+       android:defaultValue="false"
+    />
+
+    <ListPreference
+       android:key="max_log_age"
+       android:title="@string/pref_max_log_age"
+       android:entries="@array/max_log_age_entries" 
+       android:entryValues="@array/max_log_age_values"
+       android:dialogTitle="@string/pref_max_log_age_summary"
+       android:defaultValue="@string/default_max_log_age"
+    />
+  </PreferenceCategory>
+
+  <PreferenceCategory android:title="@string/pref_cat_keyguard">
+    <CheckBoxPreference
+       android:key="notify_when_kg_disabled"
+       android:title="@string/pref_notify_when_kg_disabled"
+       android:summary="@string/pref_notify_when_kg_disabled_summary"
+       android:defaultValue="true"
+    />
+
+    <CheckBoxPreference
+       android:key="confirm_disable_lock_screen"
+       android:title="@string/pref_confirm_manual_disable"
+       android:summary="@string/pref_confirm_manual_disable_summary"
+       android:defaultValue="true"
+    />
+
+    <CheckBoxPreference
+       android:key="finish_after_toggle_lock"
+       android:title="@string/pref_finish_after_toggle_lock"
+       android:summary="@string/pref_finish_after_toggle_lock_summary"
+       android:defaultValue="false"
+    />
+
+    <CheckBoxPreference
+       android:key="auto_disable_lock_screen"
+       android:title="@string/pref_auto_disable"
+       android:summary="@string/pref_auto_disable_summary"
+       android:defaultValue="false"
+    />
+
+    <CheckBoxPreference
+       android:key="disallow_disable_lock_screen"
+       android:title="@string/pref_disallow_disable_lock_screen"
+       android:summary="@string/pref_disallow_disable_lock_screen_summary"
+       android:defaultValue="false"
+    />
+  </PreferenceCategory>
+
+  <PreferenceCategory android:title="@string/pref_cat_notification_priority">
+    <ListPreference
+       android:key="main_notification_priority"
+       android:title="@string/pref_main_notification_priority"
+       android:entries="@array/notification_priority_entries" 
+       android:entryValues="@array/notification_priority_values"
+       android:dialogTitle="@string/pref_main_notification_priority_summary"
+       android:defaultValue="@string/default_main_notification_priority"
+       android:enabled="@bool/api_level_16_plus"
+    />
+  </PreferenceCategory>
+
+  <PreferenceCategory android:title="@string/pref_cat_battery_use">
+    <CheckBoxPreference
+       android:key="finish_after_battery_use"
+       android:title="@string/pref_finish_after_battery_use"
+       android:summary="@string/pref_finish_after_battery_use_summary"
+       android:defaultValue="false"
+    />
+  </PreferenceCategory>
+
+  <PreferenceCategory android:title="@string/pref_cat_temperature_unit">
+    <CheckBoxPreference
+       android:key="convert_to_fahrenheit"
+       android:title="@string/pref_convert_to_fahrenheit"
+       android:defaultValue="false"
+    />
+  </PreferenceCategory>
+
+  <PreferenceCategory android:title="@string/pref_cat_autostart">
+    <ListPreference
+       android:key="autostart"
+       android:title="@string/pref_autostart_at_boot"
+       android:entries="@array/boot_pref_entries" 
+       android:entryValues="@array/boot_pref_values"
+       android:dialogTitle="@string/pref_autostart_at_boot_summary"
+       android:defaultValue="auto"
+    />
+  </PreferenceCategory>
+
+  <PreferenceCategory android:title="@string/pref_cat_charge_as_text">
+    <CheckBoxPreference
+       android:key="charge_as_text"
+       android:title="@string/pref_charge_as_text"
+       android:summary="@string/pref_charge_as_text_summary"
+       android:defaultValue="false"
+    />
+  </PreferenceCategory>
+
+  <!--PreferenceCategory android:title="@string/pref_cat_language">
+    <ListPreference
+       android:key="language_override"
+       android:title="@string/pref_language_override"
+       android:entryValues="@array/lang_values"
+       android:dialogTitle="@string/pref_language_override_summary"
+       android:defaultValue="default"
+    />
+  </PreferenceCategory-->
+</PreferenceScreen>

@@ -1,0 +1,37 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <Preference
+     android:title="@string/pref_hint"
+     android:layout="@layout/hint"
+     android:enabled="false"
+     android:selectable="false"
+  />
+
+  <Preference
+     android:layout="@layout/divider_after_hint"
+     android:enabled="false"
+     android:selectable="false"
+  />
+
+  <Preference
+     android:key="theme_settings"
+     android:title="@string/theme_settings"
+     android:summary="@string/theme_settings_summary"
+  />
+
+  <Preference
+     android:key="time_settings"
+     android:title="@string/time_settings"
+     android:summary="@string/time_settings_summary"
+  />
+
+  <Preference
+     android:key="alarm_settings"
+     android:title="@string/alarm_settings"
+     android:summary="@string/alarm_settings_summary"
+  />
+
+  <Preference
+     android:key="other_settings"
+     android:title="@string/other_settings"
+  />
+</PreferenceScreen>

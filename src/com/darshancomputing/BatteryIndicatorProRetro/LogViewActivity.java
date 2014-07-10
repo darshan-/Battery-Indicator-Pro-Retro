@@ -818,6 +818,7 @@ public class LogViewActivity extends ListActivity {
 
             int voltage = cursor.getInt(voltageIndex);
             if (voltage != 0) temp_volt_tv.setText(((String) temp_volt_tv.getText()) + " / " + str.formatVoltage(voltage));
+            if (voltage != 0) temp_volt_tv.setText(((String) temp_volt_tv.getText().toString()) + " / " + str.formatVoltage(voltage));
         }
     }
 
